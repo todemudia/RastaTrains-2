@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingRight="0dp"
+    android:paddingLeft="0dp"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp">
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="#c0c0c0"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="80dp"
+        android:paddingRight="80dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="@color/colorAccent">
+
+        <TextView
+            android:id="@+id/dayName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            tools:text="Monday"
+            android:textColor="#fff"/>
+
+        <TextView
+            android:id="@+id/dayNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            tools:text="17"
+            android:textColor="#fff"/>
+
+        <TextView
+            android:id="@+id/month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            tools:text="April"
+            android:textColor="#fff"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="#c0c0c0"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:background="#E8E8E8">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1"
+
+        android:layout_marginLeft="20dp">
+
+        <TextView
+            android:id="@+id/location"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Liverpool"
+            android:layout_marginBottom="16dp"/>
+
+
+        <TextView
+            android:id="@+id/arrivaltime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            tools:text="16:00"/>
+
+
+    </LinearLayout>
+
+
+            <ImageView
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="13dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/arrowright"/>
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_marginRight="20dp">
+
+        <TextView
+            android:id="@+id/destination"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            tools:text="Manchester picadilly "/>
+
+        <TextView
+            android:id="@+id/depaturetime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            tools:text="17:00"/>
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="#c0c0c0" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="@color/colorAccent"
+        tools:text="40$"
+        android:textColor="#fff"/>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="#c0c0c0" />
+</LinearLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.rasta.rastatrains.SearchActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/create_text"
+            android:layout_marginTop="60dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Whatisyourname"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_alignParentTop="true"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/errormessage"
+            android:layout_marginLeft="26dp"
+            android:layout_marginRight="26dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:layout_below="@id/create_text"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_above="@+id/namebutton"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="26dp"
+            android:layout_marginRight="26dp">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+            <EditText
+                android:id="@+id/firstname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="First Name"
+                android:maxLines="1"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+            <EditText
+                android:id="@+id/lastname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Last Name"
+                android:maxLines="1"/>
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/namebutton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="@string/next"
+            android:layout_marginLeft="26dp"
+            android:layout_marginRight="26dp"
+            />
+    </RelativeLayout>
+
+    <View
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_gravity="bottom"/>
+</LinearLayout>

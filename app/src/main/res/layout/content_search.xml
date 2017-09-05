@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:fillViewport="true">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_search"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.rasta.rastatrains.SearchActivity"
+    tools:showIn="@layout/app_bar_search"
+    android:orientation="vertical">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+
+        <!-- Stop auto focussing the EditText -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@android:color/transparent"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+        </LinearLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp">
+
+        <EditText
+            android:id="@+id/headingFrom"
+            android:hint="Heading from..."
+            android:cursorVisible="false"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="28dp"
+            android:maxLines="1" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/headingTo"
+            android:hint="Heading to..."
+            android:cursorVisible="false"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:textSize="28dp"
+            android:maxLines="1"
+            android:layout_marginTop="15dp"/>
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="20dp">
+        <TextView
+            android:text="Ticket Type:"
+            android:id="@+id/ticketT"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <Spinner
+            android:id="@+id/SpinnerTicketType"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:entries="@array/ticketType"
+            android:dropDownWidth="150dp"
+            android:layout_weight="1"
+            android:dropDownSelector="@android:drawable/arrow_down_float">
+        </Spinner>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="20dp">
+        <TextView
+            android:text="Departing"
+            android:id="@+id/departText"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+        <Button
+            android:id="@+id/departDate"
+            android:text="Select date"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:onClick="datePicker" />
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="20dp">
+
+        <TextView
+            android:text="Returning"
+            android:id="@+id/returnDateText"
+            android:textStyle="bold"
+            android:textSize="28sp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/returnDate"
+            android:text="Select date"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:onClick="datePicker" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="20dp">
+        <TextView
+            android:text="Adults:"
+            android:id="@+id/adultsText"
+            android:textSize="28sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <Spinner
+            android:id="@+id/SpinnerAdults"
+            android:layout_height="50dp"
+            android:layout_width="60dp"
+            android:entries="@array/numbers"
+            android:dropDownWidth="150dp"
+            android:dropDownSelector="@android:drawable/arrow_down_float"
+            android:layout_below="@id/returnDate"
+            android:layout_weight="1"
+            android:background="#fffafafa">
+        </Spinner>
+
+        <TextView
+            android:text="Children:"
+            android:id="@+id/childrenText"
+            android:textSize="28sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <Spinner
+            android:id="@+id/SpinnerChildren"
+            android:layout_height="50dp"
+            android:layout_width="60dp"
+            android:entries="@array/numbers"
+            android:dropDownWidth="150dp"
+            android:background="#fffafafa"
+            android:layout_weight="1"
+            android:dropDownSelector="@android:drawable/arrow_down_float">
+        </Spinner>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/searchButton"
+        android:text="SEARCH"
+        android:textColor="#000"
+        android:inputType="none"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_margin="20dp"/>
+
+
+
+
+</LinearLayout>
+
+</ScrollView>
